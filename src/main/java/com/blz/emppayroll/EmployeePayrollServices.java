@@ -6,6 +6,11 @@ import java.util.Scanner;
 
 public class EmployeePayrollServices {
     public List<EmployeePayrollData> employeePayrollList;
+    public enum IOService {CONSOLE_IO, FILE_IO}
+
+    public EmployeePayrollServices(List<EmployeePayrollData> employeePayrollList) {
+        this.employeePayrollList = employeePayrollList;
+    }
 
     public EmployeePayrollServices() {
         employeePayrollList = new ArrayList<>();

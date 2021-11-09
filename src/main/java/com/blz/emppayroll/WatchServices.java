@@ -37,7 +37,7 @@ public class WatchServices {
         });
     }
 
-    /* Process all events for keys queued to the watchers */
+    // Process all events for keys queued to the watchers */
     @SuppressWarnings({"rawtypes", "unchecked"})
     void processEvents() {
         while (true) {
