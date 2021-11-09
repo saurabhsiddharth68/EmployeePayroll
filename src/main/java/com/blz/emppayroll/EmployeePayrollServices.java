@@ -57,4 +57,15 @@ public class EmployeePayrollServices {
             return new EmployeePayrollFileIOService().countEntries();
         return 0;
     }
+    // This method is implementing to print the lines in the file*/
+    public void printData(IOService ioService) {
+        if (ioService.equals(IOService.FILE_IO))
+            new EmployeePayrollFileIOService().printData();
+    }
+    // This method is reading each line of EmployeePayrollData */
+    public long readEmployeePayrollData(IOService ioService){
+        if (ioService.equals(IOService.FILE_IO))
+            this.employeePayrollList = new EmployeePayrollFileIOService().readData();
+        return employeePayrollList.size();
+    }
 }
